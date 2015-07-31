@@ -17,7 +17,7 @@ var factory = function( $, DataTable ) {
 
 
 var sort_prefix = 'css_right ui-icon ui-icon-';
-var toolbar_prefix = 'fg-toolbar ui-toolbar ui-Widget-header ui-helper-clearfix ui-corner-';
+var toolbar_prefix = 'fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-';
 
 /* Set the defaults for DataTables initialisation */
 $.extend( true, DataTable.defaults, {

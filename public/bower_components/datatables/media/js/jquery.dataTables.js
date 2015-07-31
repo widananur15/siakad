@@ -11477,8 +11477,8 @@
 		 *     </li>
 		 *     <li>The following constants are allowed:
 		 *       <ul>
-		 *         <li>'H' - jQueryUI theme "header" classes ('fg-toolbar ui-Widget-header ui-corner-tl ui-corner-tr ui-helper-clearfix')</li>
-		 *         <li>'F' - jQueryUI theme "footer" classes ('fg-toolbar ui-Widget-header ui-corner-bl ui-corner-br ui-helper-clearfix')</li>
+		 *         <li>'H' - jQueryUI theme "header" classes ('fg-toolbar ui-widget-header ui-corner-tl ui-corner-tr ui-helper-clearfix')</li>
+		 *         <li>'F' - jQueryUI theme "footer" classes ('fg-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix')</li>
 		 *       </ul>
 		 *     </li>
 		 *     <li>The following syntax is expected:
@@ -13996,7 +13996,7 @@
 	
 	var _stateDefault = _empty + 'ui-state-default';
 	var _sortIcon     = _empty + 'css_right ui-icon ui-icon-';
-	var _headerFooter = _empty + 'fg-toolbar ui-toolbar ui-Widget-header ui-helper-clearfix';
+	var _headerFooter = _empty + 'fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix';
 	
 	$.extend( DataTable.ext.oJUIClasses, DataTable.ext.classes, {
 		/* Full numbers paging buttons */

@@ -45,7 +45,7 @@ $.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings)
 
 // Extends DataTable to support jPaginator pagination style:
 $.fn.dataTableExt.oPagination.jPaginator = {
-  'paginator': $('<span>').html ( '<nav id="m_left"></nav><nav id="o_left"></nav><div class="paginator_p_wrap"><div class="paginator_p_bloc"><!--<a class="paginator_p"></a>--></div></div><nav id="o_right"></nav><nav id="m_right"></nav><div class="paginator_slider ui-slider ui-slider-horizontal ui-Widget ui-Widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a></div>'),
+  'paginator': $('<span>').html ( '<nav id="m_left"></nav><nav id="o_left"></nav><div class="paginator_p_wrap"><div class="paginator_p_bloc"><!--<a class="paginator_p"></a>--></div></div><nav id="o_right"></nav><nav id="m_right"></nav><div class="paginator_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a></div>'),
   'fnInit': function ( oSettings, nPaging, fnCallbackDraw) {
     $(nPaging).prepend ( this.paginator);
     $(this.paginator).jPaginator ( {
