@@ -39,6 +39,7 @@
 
 <body>
 
+
     @include('Widget/notification')
 
 <div class="navbar-default sidebar" role="navigation">
