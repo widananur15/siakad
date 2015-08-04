@@ -12,22 +12,22 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="{{ URL::to('/dashboard/teacher') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                <a href="{{ URL::to('/dashboard') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
 
 
 
             <li>
-                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-user-md"></i> Management<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="panels-wells.html">Panels and Wells</a>
+                        <a href="{{ URL::to('student/management') }}">Management Student</a>
                     </li>
                     <li>
-                        <a href="buttons.html">Buttons</a>
+                        <a href="buttons.html">Management Teacher</a>
                     </li>
                     <li>
-                        <a href="notifications.html">Notifications</a>
+                        <a href="notifications.html">Management Teacher Posisi</a>
                     </li>
                     <li>
                         <a href="typography.html">Typography</a>
