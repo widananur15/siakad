@@ -9,7 +9,16 @@ class SiswaController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+
+        $lists  = DB::table('t_siswa as a')
+                    ->join('t_jurusan as b','a.jurusan_id','=','b.jurusan_id')
+                    ->select('a.nisn','a.nama_siswa','a.email','a.tmp_lahir','a.tgl_lhr','a.nis','b.nama_jurusan','b.sub_jurusan','a.jns_klmn','a.active','a.agama')
+                    ->where('a.active','=','Y')->get();
+
+
+return View::make('siswa.listsstudent')
+           ->with('lists' , $lists);
+
 	}
 
 
@@ -20,7 +29,7 @@ class SiswaController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('siswa.addstudent');
 	}
 
 
