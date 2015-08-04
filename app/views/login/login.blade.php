@@ -46,12 +46,16 @@
                     <form role="form" action="{{ URL::to('/autentication') }}" method="post">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Username or Email" name="username" type="text" autofocus>
+                                <input class="form-control" placeholder="Username or Email" name="userlogin" type="text" autofocus>
                             </div>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Password" name="password" type="password">
                             </div>
 
+                        <div class="form-group">
+                          <input type="checkbox" name="remember" value="Remember Me" checked /> Remember Me
+
+                        </div>
 
                            <p align="right"> <input type="submit" value="Login" class="btn btn-primary"> </p>
                             <a href="#">Forgot Password ?</a>
@@ -63,7 +67,21 @@
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                  <center>{{ Session::get('message') }}.</center>
                             </div>
+                            @endif
 
+
+                            @if(Session::has('logout'))
+                               <div class="alert alert-danger alert-dismissable">
+                                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                   <center>{{ Session::get('logout') }}</center>
+                              </div>
+                            @endif
+
+                            @if(Session::has('notsession'))
+                               <div class="alert alert-warning alert-dismissable">
+                                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                   <center>{{ Session::get('notsession') }}</center>
+                              </div>
                             @endif
                          </p>
 
