@@ -16,4 +16,23 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/' , 'HomeController@showformlogin');
+    Route::get('/' , 'HomeController@showformlogin');
+    Route::post('/autentication' , 'AutenticationController@autentication');
+
+
+
+Route::group(['before' => 'myauth'] , function() {
+
+        //dashboard
+    Route::get('/dashboard','HomeController@index');
+
+
+        //section siswa
+    Route::get('/student/management' , 'SiswaController@index');
+    Route::get('/add/student' , 'SiswaController@create');
+
+        //logout
+    Route::get('/logout' , 'AutenticationController@logout');
+
+
+});

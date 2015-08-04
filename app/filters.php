@@ -54,6 +54,23 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
+
+/**
+ * @author: Widana Nur Azis
+ */
+
+Route::filter('myauth' , function () {
+
+    if(!Session::has('userlogin')) {
+
+        //jika user belum login maka akan dilempar ke halaman login lagi
+        return Redirect::to('/')
+            ->with('notsession' , 'You must login previous');
+
+    }
+
+});
+
 /*
 |--------------------------------------------------------------------------
 | Guest Filter
