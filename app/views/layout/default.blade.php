@@ -40,11 +40,11 @@
 <body>
 
 
-    @include('Widget/notification')
+    @include('widget/notification')
 
 <div class="navbar-default sidebar" role="navigation">
 
-    @include('Widget/navigation')
+    @include('widget/navigation')
 
 
     </div>
@@ -83,6 +83,13 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="/dist/js/sb-admin-2.js"></script>
+
+<script>
+function goBack() {
+    window.history.back()
+}
+</script>
+
 
 </body>
 
