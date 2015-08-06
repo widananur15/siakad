@@ -30,10 +30,10 @@
                         <a href="notifications.html">Management Teacher Posisi</a>
                     </li>
                     <li>
-                        <a href="typography.html">Typography</a>
+                        <a href="/mapel">Management Mapel</a>
                     </li>
                     <li>
-                        <a href="icons.html"> Icons</a>
+                        <a href="/jabatan"> Jabatan</a>
                     </li>
                     <li>
                         <a href="grid.html">Grid</a>
