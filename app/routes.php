@@ -26,8 +26,7 @@ Route::group(['before' => 'myauth'] , function() {
         //dashboard
     Route::get('/dashboard','HomeController@index');
 
-
-        //section siswa
+    //section siswa
     Route::get('/student/management' , 'SiswaController@index');
     Route::get('/add/student' , 'SiswaController@create');
 
@@ -53,7 +52,8 @@ Route::group(['before' => 'myauth'] , function() {
         //logout
     Route::get('/logout' , 'AutenticationController@logout');
 
-///
 
+
+    ///
 
 });
