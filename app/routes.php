@@ -33,4 +33,8 @@ Route::group(['before' => 'myauth'] , function() {
         //logout
     Route::get('/logout' , 'AutenticationController@logout');
 
+
+
+    //
+
 });
