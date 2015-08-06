@@ -31,6 +31,25 @@ Route::group(['before' => 'myauth'] , function() {
     Route::get('/student/management' , 'SiswaController@index');
     Route::get('/add/student' , 'SiswaController@create');
 
+        //mapel
+    Route::get('/mapel','MapelController@index');
+
+    Route::resource('mapel','MapelController');
+
+    Route::post('/mapel/{mapel_id}/update','MapelController@update');
+
+    Route::get('/add','MapelController@create');
+
+    Route::post('mapel/add/new','MapelController@store');
+
+
+        //jabatan
+    Route::get('/jabatan','JabatanController@index');
+
+    Route::resource('/jabatan','JabatanController');
+
+
+
         //logout
     Route::get('/logout' , 'AutenticationController@logout');
 
