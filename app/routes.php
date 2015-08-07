@@ -32,41 +32,26 @@ Route::group(['before' => 'myauth'] , function() {
 
         //mapel
     Route::get('/mapel','MapelController@index');
-
     Route::resource('mapel','MapelController');
-
     Route::post('/mapel/{mapel_id}/update','MapelController@update');
-
     Route::get('/add','MapelController@create');
-
     Route::post('mapel/add/new','MapelController@store');
-
 
         //jabatan
     Route::get('/jabatan','JabatanController@index');
-
     Route::get('/jabatan/{jabatan_id}/edit','JabatanController@edit');
-
     Route::post('/jabatan/{jabatan_id}/update','JabatanController@update');
-
     Route::get('/add/jabatan','JabatanController@create');
-
     Route::post('/new','JabatanController@store');
 
         //guru
     Route::get('guru','GuruController@index');
-
     Route::get('/guru/{guru_id}/edit','GuruController@edit');
-
     Route::post('/guru/{guru_id}/update','GuruController@update');
-
     Route::get('/add/guru','GuruController@create');
-
     Route::post('/new.guru','GuruController@store');
 
-
-
-        //logout
+    //logout
     Route::get('/logout' , 'AutenticationController@logout');
 
 
