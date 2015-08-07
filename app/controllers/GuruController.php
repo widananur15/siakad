@@ -9,7 +9,9 @@ class GuruController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		    $guru = DB::table('t_guru')->orderby('guru_id','asc')->get();
+        return View::make('guru.guru')
+                ->with('guru',$guru);
 	}
 
 
@@ -20,7 +22,29 @@ class GuruController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+
+        $mapel = DB::table('t_mapel')->get();
+
+        $data = [];
+        foreach ($mapel as $key){
+
+            $data[$key->mapel_id] = $key->nama_mapel;
+        }
+
+        $jabatan = DB::table('t_jabatan')->get();
+        $datajabatan = [];
+        foreach($jabatan as $key) {
+            $datajabatan[$key->jabatan_id] = $key->nama_jabatan;
+        }
+
+        $active = array(''=>'--select--',
+                        'Y' => 'Y',
+                        'N' => 'N');
+
+        return View::make('guru.add_guru')
+                ->with('datajabatan',$datajabatan)
+                ->with('data' , $data)
+                ->with('active',$active);
 	}
 
 
@@ -31,7 +55,21 @@ class GuruController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$nama_guru = Input::get('nama_guru');
+        $user_id = Input::get('user_id');
+        $nip = Input::get('nip');
+        $no_telp = Input::get('no_telp');
+        $email = Input::get('email');
+        $jabatan_id = Input::get('jabatan_id');
+        $active = Input::get('active');
+        $mapel_id = Input::get('mapel_id');
+
+        $user_id_guru = DB::tale('t_user')
+                        ->select('user_id')
+                        ->where('nip','=',$nip)
+            ->first();
+
+
 	}
 
 

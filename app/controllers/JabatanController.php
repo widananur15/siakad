@@ -23,7 +23,12 @@ class JabatanController extends \BaseController {
 	 */
 	public function create()
 	{
+        $active = array('' =>'--select--',
+                        'Y' => 'Y',
+                        'N' => 'N');
 
+        return View::make('jabatan.add_jabatan')
+                ->with('active',$active);
 	}
 
 
@@ -34,8 +39,30 @@ class JabatanController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        $nama_jabatan = Input::get('nama_jabatan');
+        $active = Input::get('active');
+
+        $rules = array('nama_jabatan' => 'required',
+                        'active' => 'required');
+
+        $validator = Validator::make(Input::all(),$rules);
+
+        if($validator->fails())
+        {
+            return Redirect::to('/add/jabatan')
+                    ->withErrors(Input::all())
+                    ->withErrors($validator);
+        }
+        else{
+
+        $save = new Jabatan();
+        $save->nama_jabatan = $nama_jabatan;
+        $save->active = $active;
+        $save->save();
+
+        return Redirect::to('/jabatan');
 	}
+    }
 
 
 	/**
@@ -58,7 +85,7 @@ class JabatanController extends \BaseController {
 	 */
 	public function edit($jabatan_id)
 	{
-		$jabatan = Jabatan::find($jabatan_id);
+
         $active = array('' =>'--select--',
                         'Y' => 'Y',
                         "N" => 'N');
@@ -66,9 +93,8 @@ class JabatanController extends \BaseController {
         $edit = Jabatan::find($jabatan_id);
 
         return View::make('jabatan.edit_jabatan')
-                ->with('jabatan',$jabatan)
-                ->with('active',$active)
-                ->with('edit',$edit);
+                ->with('edit',$edit)
+                ->with('active',$active);
 	}
 
 
@@ -80,8 +106,22 @@ class JabatanController extends \BaseController {
 	 */
 	public function update($jabatan_id)
 	{
-		$nama_jabatan = Input::get('nama_jabatan');
+
+        $nama_jabatan = Input::get('nama_jabatan');
         $active = Input::get('active');
+
+        $rules = array('nama_jabatan' => 'required',
+                        'active' => 'required');
+
+        $validator = Validator::make(Input::all(),$rules);
+
+        if($validator->fails())
+        {
+            return Redirect::to('/jabatan/$jabatan_id/edit')
+                    ->withErrors(Input::all())
+                    ->withErrors($validator);
+        }
+        else{
 
         $save = Jabatan::find($jabatan_id);
 
@@ -91,6 +131,7 @@ class JabatanController extends \BaseController {
 
         return Redirect::to('/jabatan');
 	}
+    }
 
 
 	/**
