@@ -53,6 +53,17 @@ Route::group(['before' => 'myauth'] , function() {
 
     Route::post('/new','JabatanController@store');
 
+        //guru
+    Route::get('guru','GuruController@index');
+
+    Route::get('/guru/{guru_id}/edit','GuruController@edit');
+
+    Route::post('/guru/{guru_id}/update','GuruController@update');
+
+    Route::get('/add/guru','GuruController@create');
+
+    Route::post('/new.guru','GuruController@store');
+
 
 
         //logout
