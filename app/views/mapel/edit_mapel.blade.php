@@ -1,4 +1,4 @@
-@extends('...layout.default')
+@extends('layout/default')
 @section('head')
 
 <title>Management Student</title>
@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-7">
         <h1 class="page-header">Edit Mapel</h1>
         <div class="panel panel-default">
             <div class="panel-heading">

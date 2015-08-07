@@ -45,7 +45,13 @@ Route::group(['before' => 'myauth'] , function() {
         //jabatan
     Route::get('/jabatan','JabatanController@index');
 
-    Route::resource('/jabatan','JabatanController');
+    Route::get('/jabatan/{jabatan_id}/edit','JabatanController@edit');
+
+    Route::post('/jabatan/{jabatan_id}/update','JabatanController@update');
+
+    Route::get('/add/jabatan','JabatanController@create');
+
+    Route::post('/new','JabatanController@store');
 
 
 
