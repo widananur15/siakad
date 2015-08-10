@@ -49,7 +49,7 @@
                                             </div>
                                         </td>
                                         <td>{{ $s->nis }}</td>
-                                        <td>{{ $s->nama_siswa }}</td>
+                                        <td>{{ ucwords($s->nama_siswa) }}</td>
                                         <td>{{ $s->agama }}</td>
                                         <td>{{ $s->nama_jurusan }} ({{ $s->sub_jurusan }})</td>
                                         <td><center>@if($s->jns_klmn !='L')  <i class="fa fa-female"></i> @else  <i class="fa fa-male"></i>  @endif</center></td>

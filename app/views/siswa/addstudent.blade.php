@@ -1,7 +1,7 @@
 @extends('layout/default')
 @section('head')
     
-        <title>Untilited Title</title>
+        <title>Management Student</title>
 
 @stop
 
@@ -11,198 +11,102 @@
                             <div class="col-lg-12">
                             <h1 class="page-header">Add Student</h1>
 
- <div class="row">
+</div>
+
+            <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Basic Form Elements
+                            Default Panel
                         </div>
                         <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label>Text Input</label>
-                                            <input class="form-control">
-                                            <p class="help-block">Example block-level help text here.</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Text Input with Placeholder</label>
-                                            <input class="form-control" placeholder="Enter text">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Static Control</label>
-                                            <p class="form-control-static">email@example.com</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>File input</label>
-                                            <input type="file">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Text area</label>
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Checkboxes</label>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Checkbox 1
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Checkbox 2
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Checkbox 3
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Inline Checkboxes</label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox">1
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox">2
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox">3
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Radio Buttons</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Radio 1
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio 2
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Radio 3
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Inline Radio Buttons</label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>1
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">2
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3">3
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Selects</label>
-                                            <select class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Multiple Selects</label>
-                                            <select multiple class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                        <button type="submit" class="btn btn-default">Submit Button</button>
-                                        <button type="reset" class="btn btn-default">Reset Button</button>
-                                    </form>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
-                                <div class="col-lg-6">
-                                    <h1>Disabled Form States</h1>
-                                    <form role="form">
-                                        <fieldset disabled>
-                                            <div class="form-group">
-                                                <label for="disabledSelect">Disabled input</label>
-                                                <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input" disabled>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="disabledSelect">Disabled select menu</label>
-                                                <select id="disabledSelect" class="form-control">
-                                                    <option>Disabled select</option>
-                                                </select>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox">Disabled Checkbox
-                                                </label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Disabled Button</button>
-                                        </fieldset>
-                                    </form>
-                                    <h1>Form Validation States</h1>
-                                    <form role="form">
-                                        <div class="form-group has-success">
-                                            <label class="control-label" for="inputSuccess">Input with success</label>
-                                            <input type="text" class="form-control" id="inputSuccess">
-                                        </div>
-                                        <div class="form-group has-warning">
-                                            <label class="control-label" for="inputWarning">Input with warning</label>
-                                            <input type="text" class="form-control" id="inputWarning">
-                                        </div>
-                                        <div class="form-group has-error">
-                                            <label class="control-label" for="inputError">Input with error</label>
-                                            <input type="text" class="form-control" id="inputError">
-                                        </div>
-                                    </form>
-                                    <h1>Input Groups</h1>
-                                    <form role="form">
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">@</span>
-                                            <input type="text" class="form-control" placeholder="Username">
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-eur"></i>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Font Awesome Icon">
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">$</span>
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button"><i class="fa fa-search"></i>
-                                                </button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
-                            </div>
-                            <!-- /.row (nested) -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
 
+                          <div class="col-lg-6">
+                           <form action = "{{ URL::to('student/add') }}" method="post" >
+                                        <div class="form-group">
+                                            <label>Nis Student :</label>
+                                            <input class="form-control" name="nis" type="text" placeholder="Example:101237">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Nisn Student :</label>
+                                            <input type="text" name="nisn" class="form-control" placeholder="Example:1002244987">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Name Student</label>
+                                            <input class="form-control" placeholder="Example:Jhon Smith" name="nama_student">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <labe>Tempat Lahir</labe>
+                                            <input type="text" name="tmp_lahir" class="form-control" placeholder="Example:Semarang">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Tanggal Lahir :</label>
+                                            <input type="text" placeholder="Eample: 12/03/1997" name="tmp_lhr" class="form-control">
+                                             <p class="text-primary" title="Date Format" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom"><small>Format Date (DD/MM/YYYY)</small></p>
+
+                                        </div>
+
+                                      </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                             <label>Competance Student :</label>
+                                             <select name="jurusan_id" class="form-control">
+                                                <option selected value="0">-- Select Competance Student --</option>
+                                                @foreach($get_jurusan as $key)
+                                                <option value="{{ $key->jurusan_id }}">{{ $key->nama_jurusan }} | ( {{ $key->sub_jurusan }} )</option>
+                                                @endforeach
+                                                </select>
+                                                </div>
+
+                                           <div class="form-group">
+                                               <label>Religional :</label>
+                                             <select name="agama" class="form-control">
+                                               <option value="0" selected>-- Select Religional --</option>
+                                               <option value="islam">I - Isalm</option>
+                                               <option value="kristen">K - Kristen Protestan</option>
+                                               <option value="budha">B - Budha</option>
+                                               <option value="khatolik">K - Khatolik</option>
+                                               <option value="konghucu">K - Konghucu</option>
+                                             </select>
+                                            </div>
+
+                                        <div class="form-group">
+                                            <label>Gender :</label>
+                                                <select name="jns_klmn" class="form-control">
+                                                    <option value="0" selected>-- Select Gender --</option>
+                                                    <option value="'L">L - Laki-Laki</option>
+                                                    <option value="P">P - Perempuan</option>
+                                                </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Alamat Sekarang :</label>
+                                            <input type="text" name="almt_skrng" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Alamat Asal :</label>
+                                            <input type="text" name="almt_asal" class="form-control">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <input type="submit" value="Save" class="btn btn-primary">
+                                            <input type="submit" value="Reset" class="btn btn-danger">
+                                        </div>
+
+
+                           </form>
+                            </div>
+
+                    </div>
+                </div>
+
+</div>
+</div>
 @stop
