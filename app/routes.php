@@ -29,6 +29,7 @@ Route::group(['before' => 'myauth'] , function() {
     //section siswa
     Route::get('/student/management' , 'SiswaController@index');
     Route::get('/add/student' , 'SiswaController@create');
+    Route::post('/student/add' , 'SiswaController@store');
 
         //mapel
     Route::get('/mapel','MapelController@index');
